@@ -1,6 +1,16 @@
 /* Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@300;400&display=swap');
 
-h2 {
-    background-color: brown; 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav form {
+    margin-left: 30%;
+}
+
+.my_account {
+    margin-left: -5rem;
 }
