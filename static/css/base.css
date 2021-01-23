@@ -5,12 +5,55 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Global variables */
+:root {
+    --primary-color:#6a097d;
+    --white: #ffffff;
+    --roboto-slab: 'Roboto Slab', serif;
+    --roboto: 'Roboto', sans-serif;
+}
+
+/* Global class */
+.primary_color {
+    background-color: var(--primary-color);
+}
+
+.navbar {
+    border-bottom: 2px solid #c060a1;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    color: var(--white);
+    font-family: var(--roboto);
+} 
+
+.navbar-nav .nav-item a {
+    color: var(--white);
+}
+
+
+.navbar-toggler {
+   color: var(--white);   
 }
 
 nav form {
     margin-left: 30%;
+    background-color: #c060a1;
+}
+
+.fa-search {
+    color: white;
 }
 
 .my_account {
     margin-left: -5rem;
+    background-color: var(--primary-color);
+}
+
+.dropdown-menu {
+    background-color: var(--primary-color);
 }
