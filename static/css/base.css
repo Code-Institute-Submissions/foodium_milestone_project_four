@@ -57,3 +57,32 @@ nav form {
 .dropdown-menu {
     background-color: var(--primary-color);
 }
+
+.carousel-caption h5{
+    padding-top: 20% !important;
+}
+
+.carousel-item {
+    height: 30rem;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-control-next i, 
+.carousel-control-prev i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    background-color: #ffffff;
+    border-radius: 100%;
+    padding: .5rem;
+}
+
+.carousel-item h5 {
+    margin-top: 20rem;
+}
