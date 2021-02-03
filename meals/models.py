@@ -6,8 +6,26 @@ class Category(models.Model):
     slug = models.SlugField(max_length=254, unique=True)
 
     class Meta:
-        verbose_name = 'category'
-        verbose_name_plural = 'categories'
+        verbose_name_plural = 'Categories'
+
+    def __str__(self):
+        return self.name
+
+
+class Meal(models.Model):
+    name = models.CharField(max_length=254, unique=True)
+    slug = models.SlugField(max_length=254, unique=True)
+    Category = models.ForeignKey(Category, null=True, blank=True,
+                                 on_delete=models.SET_NULL)
+    description = models.TextField()
+    people = models.IntegerField()
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    preparation_time = models.IntegerField()
+    rating = models.DecimalField(max_digits=6, decimal_places=2,
+                                 null=True, blank=True)
+    image = models.ImageField(upload_to='meals', blank=True)
+    stock = models.IntegerField()
+    available = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name
