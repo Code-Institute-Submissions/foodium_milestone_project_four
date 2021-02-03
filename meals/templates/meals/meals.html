@@ -9,15 +9,15 @@
         <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="card mb-4">
                 <div class="meal_image">
-                     {% if meal.image %}
-                                <a href="">
-                                    <img class="" src="{{ meal.image.url }}" alt="{{ meal.name }}">
-                                </a>
-                                {% else %}
-                                <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ meal.name }}">
-                                </a>
-                                {% endif %}
+                    {% if meal.image %}
+                    <a href="{% url 'meal_detail' meal.id %}">
+                        <img class="" src="{{ meal.image.url }}" alt="{{ meal.name }}">
+                    </a>
+                    {% else %}
+                    <a href="{% url 'meal_detail' meal.id %}">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ meal.name }}">
+                    </a>
+                    {% endif %}
                 </div>
                 <div class="card-footer ">
                     <p class="font-weight-bold mb-0"> {{ meal.name }}</p>
