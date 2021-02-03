@@ -45,14 +45,14 @@
 
 <div class="container">
     <div class="row">
-        {% for meal in '12345678' %}
+        {% for meal in '123456789' %}
         <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="card mb-4">
                 <div class="meal_image">
                         <img src="{% static "images/creole_soul_chicken.jpeg" %}" alt="meal_image">
                 </div>
                 <div class="card-footer ">
-                    <p class="font-weight-bold mb-0">Pasta pizzario</p>
+                    <p class="font-weight-bold mb-0"> {{ meal.name }}</p>
                     <h5 class="text-info font-italic mb-0">
                         <span>$</span> 15
                     </h5>

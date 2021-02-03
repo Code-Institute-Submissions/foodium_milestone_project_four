@@ -13,4 +13,4 @@ def all_meals(request):
         'meals': meals,
     }
 
-    return render(request, meals/meals.html, context)
+    return render(request, 'meals/meals.html', context)
