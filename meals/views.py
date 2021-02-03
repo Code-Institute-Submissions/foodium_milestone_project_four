@@ -22,7 +22,7 @@ def meal_detail(request, meal_id):
     meal = get_object_or_404(Meal, pk=meal_id)
 
     context = {
-        'meals': meal,
+        'meal': meal,
     }
 
-    return render(request, 'mealss/meal_detail.html', context)
+    return render(request, 'meals/meal_detail.html', context)
