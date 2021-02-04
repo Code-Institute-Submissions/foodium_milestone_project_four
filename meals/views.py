@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Meal
+from .models import Meal, Category
 
 # Create your views here
 
@@ -11,8 +11,14 @@ def all_meals(request):
 
     meals = Meal.objects.all()
     query = None
+    categories = None
 
     if request.GET:
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            meals = meals.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -25,7 +31,8 @@ def all_meals(request):
 
     context = {
         'meals': meals,
-        'search_term': query
+        'search_term': query,
+        'current_categories': categories,
     }
 
     return render(request, 'meals/meals.html', context)

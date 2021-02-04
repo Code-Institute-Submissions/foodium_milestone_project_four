@@ -15,7 +15,7 @@ class Category(models.Model):
 class Meal(models.Model):
     name = models.CharField(max_length=254, unique=True)
     slug = models.SlugField(max_length=254, unique=True)
-    Category = models.ForeignKey(Category, null=True, blank=True,
+    category = models.ForeignKey(Category, null=True, blank=True,
                                  on_delete=models.SET_NULL)
     description = models.TextField()
     people = models.IntegerField()

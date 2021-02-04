@@ -45,9 +45,8 @@
                             MENU
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">menu 1</a>
-                            <a class="dropdown-item" href="#">menu 2</a>
-                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{% url 'meals' %}?category=Brunch">Brunch</a>
+                            <a class="dropdown-item" href="{% url 'meals' %}?category=Dinner">Dinner</a>
                             <a class="dropdown-item" href="{% url 'meals' %}">All meals</a>
                         </div>
                     </li>
