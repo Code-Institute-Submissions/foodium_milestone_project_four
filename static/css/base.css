@@ -94,9 +94,19 @@ nav form {
     overflow: hidden;
 }
 
-.meal_image a img {
+.meal_image a img,
+.meal_detail_image a img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+.meal_detail_image {
+    height: 25rem;
+    overflow: hidden;
+}
+
+.fa-star {
+    color: green;
 }
