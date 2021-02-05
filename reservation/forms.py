@@ -6,6 +6,6 @@ class TableReservationForm(forms.ModelForm):
     '''
     Form that allows guests/users to reserve a table
     '''
-    class meta:
+    class Meta:
         model = Reservation
         fields = '__all__'
