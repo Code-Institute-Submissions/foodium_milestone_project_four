@@ -6,7 +6,13 @@ def cart_contents(request):
     cart_items = []
     total = 0
     meal_count = 0
-    delivery = 39
+
+    ''' Display delivery cost only if total is greater 0 '''
+    if total > 0:
+        delivery = 39
+    else:
+        delivery = 0
+
     grand_total = delivery + total
 
     context = {
