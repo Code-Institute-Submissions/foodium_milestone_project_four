@@ -110,3 +110,8 @@ nav form {
 .fa-star {
     color: green;
 }
+
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
