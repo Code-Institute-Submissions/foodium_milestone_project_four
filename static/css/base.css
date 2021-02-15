@@ -120,3 +120,19 @@ nav form {
 .remove-item {
     cursor: pointer;
 }
+
+/* Media Queries */
+
+/* For all devices with screen size 991px and below */
+@media only screen and (max-width: 991px) {
+
+    .my_account {
+    margin-left: 0rem;  
+}
+
+nav form {
+    width: 100%;
+    margin-left: 0;
+}
+
+}
