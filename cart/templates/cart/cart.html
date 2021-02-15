@@ -46,7 +46,7 @@
                             <p class="my-0">${{ item.meal.price }}</p>
                         </td>
                         <td class="py-3 w-25">
-                            <form class="" method="POST" action="">
+                            <form class="" method="POST" action="{% url 'adjust_cart' item.item_id %}">
                                 {% csrf_token %}
                                 <div class="form-group">
                                     <div class="input-group">
@@ -128,7 +128,8 @@
 <script type="text/javascript">
     // Update quantity on click
     $('.update-link').click(function(e) {
-        let form = $(this).prev('.update-form');
+        let form = $(this).prev();
+        console.log(form);
         form.submit();
     })
 
