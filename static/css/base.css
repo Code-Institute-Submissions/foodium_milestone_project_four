@@ -10,7 +10,8 @@
 
 /* Global variables */
 :root {
-    --primary-color:#6a097d;
+    --primary-color:#0B0E13;
+    --secondary-color: #B48C80;
     --white: #ffffff;
     --roboto-slab: 'Roboto Slab', serif;
     --roboto: 'Roboto', sans-serif;
@@ -21,28 +22,32 @@
     background-color: var(--primary-color);
 }
 
-.navbar {
-    border-bottom: 2px solid #c060a1;
+.white {
+    color: var(--white);
 }
 
-.navbar-brand {
+.navbar {
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.navbar .navbar-brand {
     font-size: 2rem;
     color: var(--white);
     font-family: var(--roboto);
 } 
 
 .navbar-nav .nav-item a {
-    color: var(--white);
+    color: var(--white) !important;
 }
 
 
 .navbar-toggler {
-   color: var(--white);   
+   color: var(--white) !important;   
 }
 
 nav form {
     margin-left: 30%;
-    background-color: #c060a1;
+    background-color: var(--secondary-color);
 }
 
 .fa-search {

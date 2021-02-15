@@ -5,8 +5,8 @@
             <li class="list-inline-item d-lg-none">
                 <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
                     <div class="text-center">
-                        <div><i class="fas fa-shopping-cart fa-lg"></i></div>
-                        <p class="my-0">
+                        <div><i class="fas fa-shopping-cart fa-lg white"></i></div>
+                        <p class="my-0 white">
                             {% if grand_total %}
                             ${{ grand_total|floatformat:2 }}
                             {% else %}
@@ -79,8 +79,8 @@
             <li class="list-inline-item d-none d-lg-block">
                 <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
                     <div class="text-center">
-                        <div><i class="fas fa-shopping-cart fa-lg"></i></div>
-                        <p class="my-0">
+                        <div><i class="fas fa-shopping-cart fa-lg white"></i></div>
+                        <p class="my-0 white">
                             {% if grand_total %}
                             ${{ grand_total|floatformat:2 }}
                             {% else %}
