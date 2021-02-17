@@ -1,3 +1,4 @@
+import os
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 
@@ -14,6 +15,8 @@ def checkout(request):
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
+        'stripe_public_key': os.environ.get('stripe_publishable_key'),
+        'client_secret': os.environ.get('stripe_secret_key'),
     }
 
     return render(request, template, context)
