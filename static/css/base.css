@@ -40,6 +40,13 @@
     color: var(--white) !important;
 }
 
+.foodium_logo {
+    width: 9.5rem;
+    height: 9.5rem;
+    margin-top: -2rem;
+    margin-bottom: -2rem;
+
+}
 
 .navbar-toggler {
    color: var(--white) !important;   
