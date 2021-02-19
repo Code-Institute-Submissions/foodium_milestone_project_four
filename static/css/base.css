@@ -128,6 +128,38 @@ nav form {
     cursor: pointer;
 }
 
+/* Footer */
+
+footer{
+    background-color: var(--primary-color);
+    color: #ffffff;  
+    border-top: 2px solid var(--secondary-color);    
+}
+
+footer a {
+  display: inline-block;
+  font-size: 2rem;
+  color: #ffffff;
+  margin: .4rem .8rem;
+  text-decoration: none;
+}
+
+footer ul{
+  justify-content:space-between; 
+}
+
+footer ul li{
+  display:inline-block;
+  border: 1px solid #ffffff;
+  padding: .1rem;
+  border-radius: 40%;
+ }
+
+hr {
+    background-color: #ffffff;
+    font-weight: lighter;
+}
+
 /* Media Queries */
 
 /* For all devices with screen size 991px and below */
