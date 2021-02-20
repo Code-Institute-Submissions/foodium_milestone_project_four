@@ -75,7 +75,8 @@ nav form {
 }
 
 .carousel-item {
-    height: 30rem;
+    height: 90vh;
+    /* height: calc(100vh - 140px); */
     overflow: hidden;
 }
 
