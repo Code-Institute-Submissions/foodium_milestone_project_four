@@ -3,6 +3,8 @@ from django.contrib import messages
 from django.conf import settings
 
 from .forms import OrderForm
+from .models import OrderLineItem
+from meals.models import Meal
 from cart.contexts import cart_contents
 import stripe
 
@@ -10,7 +12,48 @@ import stripe
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
-    cart = request.session.get('cart', {})
+
+    if request.method == 'POST':
+        cart = request.session.get('cart', {})
+
+        form_data = {
+            'full_name': request.POST['full_name'],
+            'email': request.POST['email'],
+            'phone_number': request.POST['phone_number'],
+            'postcode': request.POST['postcode'],
+            'town_or_city': request.POST['town_or_city'],
+            'street_address': request.POST['street_address'],
+        }
+        order_form = OrderForm(form_data)
+        if order_form.is_valid():
+            order = order_form.save()
+            for item_id, item_data in cart.items():
+                try:
+                    meal = Meal.objects.get(id=item_id)
+                    order_line_item = OrderLineItem(
+                        order=order,
+                        meal=meal,
+                        quantity=item_data,
+                        )
+                    order_line_item.save()
+
+                except Meal.DoesNotExist:
+                    messages.error(request, (
+                        "One of the item in your cart wasn't\
+                             found in our database. "
+                        "Please call us for assistance!")
+                    )
+                    order.delete()
+                    return redirect(reverse('view_cart'))
+
+            request.session['save_info'] = 'save-info' in request.POST
+            return redirect(reverse('checkout_success',
+                                    args=[order.order_number]))
+        else:
+            messages.error(request, 'There was an error with your form. \
+                Please double check your information.')
+    else:
+        cart = request.session.get('cart', {})
     if not cart:
         messages.error(request, "There's nothing in your cart at the moment")
         return redirect(reverse('meals'))
