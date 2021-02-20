@@ -5,9 +5,9 @@
     https://stripe.com/docs/stripe-js
 */
 
-let stripe_public_key = $('#id_stripe_public_key').text().slice(1, -1);
-let client_secret = $('#id_client_secret').text().slice(1, -1);
-let stripe = Stripe(stripe_public_key);
+let stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
+let clientSecret = $('#id_client_secret').text().slice(1, -1);
+let stripe = Stripe(stripePublicKey);
 let elements = stripe.elements();
 let style = {
     base: {
