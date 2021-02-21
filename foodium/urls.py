@@ -27,6 +27,11 @@ urlpatterns = [
     path('reserve_a_table/', include('reservation.urls')),
     path('cart/', include('cart.urls')),
     path('checkout/', include('checkout.urls')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+print(urlpatterns)
+
+print(static(settings.STATIC_URL))
+
 
 handler404 = 'foodium.views.handler404'
