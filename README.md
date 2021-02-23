@@ -62,7 +62,7 @@
     - The project uses **Font Awesome** for the various icons in my app.
 - [**Gitpod**](https://www.gitpod.io/)
    -Gitpod is an online integrated development environment for GitHub. It creates a complete and disposable development environment for any GitHub repository directly in a browser. This project was developed in Gitpod.
-- [*Dev Tools*](https://developers.google.com/web/tools/chrome-devtools)
+- [**Dev Tools**](https://developers.google.com/web/tools/chrome-devtools)
    - Chrome DevTools is a set of web developer tools built directly into the Google Chrome browser. DevTools can help you edit pages on-the-fly     and diagnose problems quickly, which ultimately helps you build better websites, faster. Google Chrome's Dev Tools was used in the building     process of this project.
 
 ### Version Control
