@@ -26,6 +26,12 @@
                     </h5>
                     <p class="mb-0">{{ meal.category }}</p>
                 </div>
+                {% if request.user.is_superuser %}
+                    <small class="ml-3">
+                        <a href="{% url 'edit_meal' meal.id %}">Edit</a> | 
+                        <a class="text-danger" href="{% url 'delete_meal' meal.id %}">Delete</a>
+                    </small>
+                {% endif %}
             </div>
         </div>
         {% endfor %}
