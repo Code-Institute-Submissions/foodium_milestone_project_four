@@ -52,13 +52,13 @@ def meal_detail(request, meal_id):
 
 
 def add_meal(request):
-    """ Add a meal to the store """
+    """ Add a meal to Foodium's menu """
     if request.method == 'POST':
         form = MealForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            meal = form.save()
             messages.success(request, 'Successfully added meal!')
-            return redirect(reverse('add_meal'))
+            return redirect(reverse('meal_detail', args=[meal.id]))
         else:
             messages.error(request, 'Failed to add product.\
                         Please ensure the form is valid.')
@@ -74,7 +74,7 @@ def add_meal(request):
 
 
 def edit_meal(request, meal_id):
-    """ Edit a product in the store """
+    """ Edit a Meal on Foodium's menu """
     meal = get_object_or_404(Meal, pk=meal_id)
     if request.method == 'POST':
         form = MealForm(request.POST, request.FILES, instance=meal)
@@ -96,3 +96,11 @@ def edit_meal(request, meal_id):
     }
 
     return render(request, template, context)
+
+
+def delete_meal(request, meal_id):
+    """ Delete a Meal from Foodium's menu """
+    meal = get_object_or_404(Meal, pk=meal_id)
+    meal.delete()
+    messages.success(request, 'Meal deleted!')
+    return redirect(reverse('meals'))
