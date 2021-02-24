@@ -11,6 +11,9 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+    def get_slug(self):
+        return self.slug
+
 
 class Meal(models.Model):
     name = models.CharField(max_length=254, unique=True)
