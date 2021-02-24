@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from .models import Meal, Category
 from .forms import MealForm
@@ -51,6 +52,7 @@ def meal_detail(request, meal_id):
     return render(request, 'meals/meal_detail.html', context)
 
 
+@login_required
 def add_meal(request):
     """ Add a meal to Foodium's menu """
     if request.method == 'POST':
@@ -73,6 +75,7 @@ def add_meal(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_meal(request, meal_id):
     """ Edit a Meal on Foodium's menu """
     meal = get_object_or_404(Meal, pk=meal_id)
@@ -98,6 +101,7 @@ def edit_meal(request, meal_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_meal(request, meal_id):
     """ Delete a Meal from Foodium's menu """
     meal = get_object_or_404(Meal, pk=meal_id)
