@@ -55,6 +55,10 @@ def meal_detail(request, meal_id):
 @login_required
 def add_meal(request):
     """ Add a meal to Foodium's menu """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only authorised\
+         personnel can do that.')
+        return redirect(reverse('home'))
     if request.method == 'POST':
         form = MealForm(request.POST, request.FILES)
         if form.is_valid():
@@ -78,6 +82,11 @@ def add_meal(request):
 @login_required
 def edit_meal(request, meal_id):
     """ Edit a Meal on Foodium's menu """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only authorised\
+         personnel can do that.')
+        return redirect(reverse('home'))
+
     meal = get_object_or_404(Meal, pk=meal_id)
     if request.method == 'POST':
         form = MealForm(request.POST, request.FILES, instance=meal)
@@ -104,6 +113,11 @@ def edit_meal(request, meal_id):
 @login_required
 def delete_meal(request, meal_id):
     """ Delete a Meal from Foodium's menu """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only authorised\
+         personnel can do that.')
+        return redirect(reverse('home'))
+
     meal = get_object_or_404(Meal, pk=meal_id)
     meal.delete()
     messages.success(request, 'Meal deleted!')
