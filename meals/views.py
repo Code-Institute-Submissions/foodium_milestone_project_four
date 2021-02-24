@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Meal, Category
+from .forms import MealForm
 
 # Create your views here
 
@@ -48,3 +49,14 @@ def meal_detail(request, meal_id):
     }
 
     return render(request, 'meals/meal_detail.html', context)
+
+
+def add_meal(request):
+    """ Add a meal to the store """
+    form = MealForm()
+    template = 'meals/add_meal.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
