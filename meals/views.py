@@ -53,7 +53,18 @@ def meal_detail(request, meal_id):
 
 def add_meal(request):
     """ Add a meal to the store """
-    form = MealForm()
+    if request.method == 'POST':
+        form = MealForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added meal!')
+            return redirect(reverse('add_meal'))
+        else:
+            messages.error(request, 'Failed to add product.\
+                        Please ensure the form is valid.')
+    else:
+        form = MealForm()
+
     template = 'meals/add_meal.html'
     context = {
         'form': form,
