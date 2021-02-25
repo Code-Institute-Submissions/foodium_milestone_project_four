@@ -8,6 +8,10 @@
     text-decoration: none;
 }
 
+a {
+    list-style-type: none;
+    text-decoration: none;
+}
 /* Global variables */
 :root {
     --primary-color:#0B0E13;
@@ -97,6 +101,26 @@ nav form {
 
 .carousel-item h5 {
     margin-top: 20rem;
+}
+
+/* buttons */
+
+.btn_primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn_primary:hover,
+.btn_primary:active,
+.btn_primary:focus {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.btn_outline_primary {
+    background: white;
+    color: var(--primary-color)!important; /* use important to override link colors for <a> elements */
+    border: 1px solid var(--primary-color);
 }
 
 
