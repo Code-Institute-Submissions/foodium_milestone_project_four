@@ -5,7 +5,7 @@ def handler404(request, exception):
     '''
     404 Error Handler
     '''
-    return render(request, 'errors/error_404.html')
+    return render(request, 'errors/error_404.html', status=404)
 
 # def handler404(request, exception):
 #     context = {}
