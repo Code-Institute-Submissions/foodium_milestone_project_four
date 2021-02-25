@@ -27,7 +27,7 @@ def contact(request):
                 name=request.POST.get('name'),
                 subject=request.POST.get('subject'),
                 email=request.POST.get('email'),
-                comment=request.POST.get('comment'),
+                message=request.POST.get('message'),
             )
             create_contact_form.save()
 
