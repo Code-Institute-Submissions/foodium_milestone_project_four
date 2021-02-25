@@ -14,14 +14,16 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h2 class="page_heading">Contact Us</h2>
+                <h2 class="page_heading text-center mt-5">Contact Us</h2>
             </div>
         </div>
     </div>
+
     <div class="container">
-        <div class="row pb-4">
-            <div class="col-sm-12 col-md-8">
+        <div class="row justify-content-center mt-5">
+            <div class="col-12 col-md-8 col-lg-6 pb-5">
                 <h4>Send us a message</h4>
+                <!-- Contact form -->
                 <form action="{% url 'contact' %}" method="POST">
                     {% csrf_token %}
                     {% if user.is_authenticated %}
@@ -32,9 +34,10 @@
                         <div class="form-group custom-form mt-3">
                             {{ form | crispy }}
                         </div>
-                    <input type="submit" value="Send" class="btn btn_primary btn-block">
+                    <input type="submit" value="Send" class="btn btn_primary btn-block rounded-0">
                 </form>
             </div>
         </div>
     </div>
+
 {% endblock %}
