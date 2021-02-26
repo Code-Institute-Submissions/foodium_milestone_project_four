@@ -11,9 +11,9 @@
                         <div><i class="fas fa-shopping-cart fa-lg white"></i></div>
                         <p class="my-0 white">
                             {% if grand_total %}
-                            ${{ grand_total|floatformat:2 }}
+                            {{ grand_total|floatformat:2 }}kr
                             {% else %}
-                            $0.00
+                            0.00kr
                             {% endif %}
                         </p>
                     </div>
@@ -87,9 +87,9 @@
                         <div><i class="fas fa-shopping-cart fa-lg white"></i></div>
                         <p class="my-0 white">
                             {% if grand_total %}
-                            ${{ grand_total|floatformat:2 }}
+                            {{ grand_total|floatformat:2 }}kr
                             {% else %}
-                            $0.00
+                            0.00kr
                             {% endif %}
                         </p>
                     </div>
