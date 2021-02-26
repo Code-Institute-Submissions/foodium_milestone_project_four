@@ -18,12 +18,6 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls import handler404
-# import django
-# from django.views.defaults import page_not_found
-
-
-# def custom_page_not_found(request):
-#     return django.views.defaults.page_not_found(request, None)
 
 
 urlpatterns = [
@@ -36,7 +30,8 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
     path('contact/', include('contact.urls')),
+    path('pages/', include('pages.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
-handler404 = 'foodium.views.handler404'
+# handler404 = 'foodium.views.handler404'

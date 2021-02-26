@@ -152,6 +152,36 @@ nav form {
     cursor: pointer;
 }
 
+/* -------------------FAQ */
+
+.card {
+    width: 100%;
+    padding: 0 .4rem;
+    border: 0;
+    color: #000;
+    margin: .8rem;
+}
+
+.card-header {
+    background-color: rgba(11, 14, 19, 0.1);
+}
+
+.card-body {
+    background-color: rgba(180, 140, 128, 0.103);
+    font-size: 1.2rem;
+}
+
+.card .card-header h2 button {
+    
+  outline-offset: -4px;
+  padding: 0;
+  border: none;
+  outline: none;
+  color: var(--primary-color);
+  background: none;
+  font-size: 1.5rem !important;
+}
+
 /* Footer */
 
 footer{

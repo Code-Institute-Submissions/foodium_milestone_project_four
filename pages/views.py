@@ -5,4 +5,4 @@ def faq_view(request, *args, **kwargs):
     """
     A view to render frequently asked questions' template
     """
-    return render(request, "faq.html")
+    return render(request, "pages/faq.html")
