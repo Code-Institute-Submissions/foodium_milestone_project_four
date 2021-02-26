@@ -21,9 +21,9 @@ class Meal(models.Model):
     category = models.ForeignKey(Category, null=True, blank=True,
                                  on_delete=models.SET_NULL)
     description = models.TextField(blank=True)
-    people = models.IntegerField(blank=True)
+    people = models.IntegerField(null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    preparation_time = models.IntegerField(blank=True)
+    preparation_time = models.IntegerField(null=True, blank=True)
     rating = models.DecimalField(max_digits=6, decimal_places=2,
                                  null=True, blank=True)
     image = models.ImageField(upload_to='meals', blank=True)
