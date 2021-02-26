@@ -29,7 +29,11 @@
                 <div class="mb-5 mt-md-5">
                     <h3 class="mb-0">{{ meal.name }}</h3>
                     <p class="lead mb-0 text-left">Price : ${{ meal.price }}</p>
+                    {% if meal.people %}
+
+
                     <p class="lead mb-0 text-left">People Per Serving : {{ meal.people }}</p>
+                    {% endif %}
                     <p class="lead mb-0 text-left">Preparation Time : {{ meal.preparation_time }} Minutes</p>
                     {% if meal.rating %}
                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ meal.rating }} / 5</small>
