@@ -182,6 +182,36 @@ nav form {
   font-size: 1.5rem !important;
 }
 
+/* ----------------About us */
+
+
+
+
+/* .foodium_interior {
+    width: 100%;
+    height: 300px;
+    max-height: 300px;
+} */
+
+.foodium_interior img {
+    width: 100%;
+    height: 600px;
+}
+
+/* .card {
+    
+    max-height: 35rem;
+    overflow: hidden;
+} */
+
+/* .chef_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+} */
+
+
 /* Footer */
 
 footer{
