@@ -1,5 +1,5 @@
 /* Google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&family=Roboto:wght@300&family=Satisfy&display=swap');
 
 * {
     margin: 0;
@@ -60,14 +60,19 @@ a {
 
 .navbar-nav .nav-item a {
     color: var(--white) !important;
+    font-size: 1.2rem;
+    font-family: var(--roboto-slab);
+}
+
+.navbar-nav .nav-item a:hover {
+    color: var(--secondary-color) !important;
 }
 
 .foodium_logo {
-    width: 9.5rem;
-    height: 9.5rem;
+    width: 8.5rem;
+    height: 8.5rem;
     margin-top: -2rem;
     margin-bottom: -2rem;
-
 }
 
 .navbar-toggler {
@@ -75,7 +80,7 @@ a {
 }
 
 nav form {
-    margin-left: 30%;
+    margin-left: 25%;
     background-color: var(--secondary-color);
 }
 
@@ -86,14 +91,22 @@ nav form {
 .my_account {
     margin-left: -5rem;
     background-color: var(--primary-color);
+     border-bottom: 1px solid var(--secondary-color);
 }
 
 .dropdown-menu {
     background-color: var(--primary-color);
 }
 
+.dropdown-item:hover{
+    background-color: var(--primary-color);
+}
 .carousel-caption h5{
     padding-top: 20% !important;
+}
+
+.fas {
+    margin-right: .4rem;
 }
 
 .carousel-item {
@@ -268,6 +281,9 @@ hr {
     overflow: visible;
 }
 
+
+
+
 .toast-capper {
     height: 2px;
 }
@@ -339,7 +355,27 @@ nav form {
     margin-left: 0;
 }
 
+
+.navbar-nav .nav-item a {
+ 
+    font-size: 1rem;
+   
 }
+
+}
+
+/* For all devices with screen size 991px and below */
+@media only screen and (max-width: 1112px) {
+
+ nav form {
+    margin-left: 5%;
+    background-color: var(--secondary-color);
+}
+
+}
+
+
+
 
 /* Allauth form formatting */
 
