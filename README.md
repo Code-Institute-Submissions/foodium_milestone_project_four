@@ -32,6 +32,16 @@
   - [Acknowledgements](#Acknowledgements)
   - [Disclaimer](#Disclaimer)
 
+## About
+
+This web application is a fictional restaurant based in Copenhagen the capital of Denmark. The site allows users to perfom many actions such as order a meal, contact the restaurant, make a reservation, and create an account. And the site allows the restaurant owner or authorized personal to perfom certain actions such as add, edit and delete meals from the website's menu.
+
+### Why This Project?
+
+I created this web application for the Full Stack Frameworks project of [**_Code Institute's_**](https://codeinstitute.net/) Full Stack Software Development course.The project scope was to create a web application for a restaurant, which allows users to order meals and pay with their credit card.
+
+The front-end display and functionality uses HTML, CSS and JavaScript. The back-end functionality uses Python, Django, SQLite3 and PostgreSQL.
+
   ## Technologies Used
 
 - [**Balsamiq**](https://balsamiq.com/)
