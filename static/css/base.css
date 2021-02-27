@@ -16,9 +16,10 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  font: var(--roboto);
 }
 
-.main {
+main {
   flex: 1 0 auto;
 }
 
@@ -226,9 +227,16 @@ nav form {
     font-size: 1.5rem;
     font-family: var(--roboto-slab);
     text-decoration: none;
-    display: inline-block;
-    text-align: right;  
-    
+    display: block;
+    align-items: center;
+}
+
+.pages   {
+    font-size: 1.5rem;
+    font-family: var(--roboto-slab);
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .pages  a:hover{
@@ -238,7 +246,7 @@ nav form {
 /* Footer */
 
 footer{
-      flex-shrink: 0;
+    flex-shrink: 0;
     background-color: var(--primary-color);
     color: #ffffff;  
     border-top: 2px solid var(--secondary-color);    
@@ -252,15 +260,20 @@ footer a {
   text-decoration: none;
 }
 
-footer ul{
-  justify-content:space-between; 
+footer a:hover {
+  color: var(--secondary-color);
 }
+
 
 footer ul li{
   display:inline-block;
   border: 1px solid #ffffff;
   padding: .1rem;
   border-radius: 40%;
+ }
+
+ footer ul li:hover{
+  border: 1px solid var(--secondary-color);
  }
 
 hr {
@@ -344,6 +357,17 @@ hr {
 /* Media Queries */
 
 /* For all devices with screen size 991px and below */
+@media only screen and (max-width: 1112px) {
+
+ nav form {
+    margin-left: 5%;
+    background-color: var(--secondary-color);
+}
+
+}
+
+
+/* For all devices with screen size 991px and below */
 @media only screen and (max-width: 991px) {
 
 .my_account {
@@ -357,25 +381,23 @@ nav form {
 
 
 .navbar-nav .nav-item a {
- 
     font-size: 1rem;
-   
 }
 
+/* footer ul li {
+ margin: 5px auto;
+ } */
+
+ .social-icons {
+     text-align: center;
+ }
+
+.pages   {
+    justify-content: center;
 }
 
-/* For all devices with screen size 991px and below */
-@media only screen and (max-width: 1112px) {
-
- nav form {
-    margin-left: 5%;
-    background-color: var(--secondary-color);
-}
 
 }
-
-
-
 
 /* Allauth form formatting */
 
