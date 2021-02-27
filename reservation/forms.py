@@ -47,7 +47,7 @@ class TableReservationForm(forms.ModelForm):
             'placeholder': 'Enter number of persons'
         })
     )
-    date = forms.IntegerField(
+    date = forms.DateField(
         required=True,
         label='',
         widget=forms.TextInput(attrs={
