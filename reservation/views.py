@@ -50,9 +50,13 @@ def reserve_a_table(request):
 
         messages.success(request, 'Reservation form successfully submitted.\
                                     We will be in touch!')
-        return redirect(reverse('reservation_success'))
+        return redirect(reverse('reserve_a_table_success'))
 
     context = {
         'form': TableReservationForm
     }
     return render(request, 'reservation/reservation.html', context)
+
+
+def reserve_a_table_success(request):
+    return render(request, "reservation/reservation_success.html")
