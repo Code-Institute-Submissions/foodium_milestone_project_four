@@ -1,10 +1,31 @@
 {% extends 'base.html' %}
 {% load static %}
 
+
+{% block page_header %}
+<div class="container header-container mt-5">
+    <div class="row">
+        <div class="col"><a class="mr-2" href="{% url 'home' %}">Home</a><span>/</span>
+            <span class="font-weight-bold ml-2">Menu</span>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
 {% block content %}
 
-<div class="container">
 
+<div class="container">
+    <!-- Display menu and search results count -->
+    <div class="col-12 col-md-6">
+        <p class="text-muted mt-4 text-md-left">
+            {% if search_term or current_categories  != 'None_None' %}
+            <span><a href="{% url 'meals' %}">Reset Menu</a> | </span>
+            {% endif %}
+            {{ meals|length }} Meals{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+        </p>
+    </div>
+    <!-- Meals card -->
     <div class="row mt-5 mb-5">
         {% for meal in meals %}
         <div class="col-lg-3 col-md-6 col-sm-6">
@@ -23,15 +44,15 @@
                 <div class="card-footer ">
                     <p class="font-weight-bold mb-0"> {{ meal.name }}</p>
                     <h5 class="text-info font-italic mb-0">
-                         {{ meal.price }}kr
+                        {{ meal.price }}kr
                     </h5>
                     <p class="mb-0">{{ meal.category }}</p>
                 </div>
                 {% if request.user.is_superuser %}
-                    <small class="ml-3">
-                        <a href="{% url 'edit_meal' meal.id %}">Edit</a> | 
-                        <a class="text-danger" href="{% url 'delete_meal' meal.id %}">Delete</a>
-                    </small>
+                <small class="ml-3">
+                    <a href="{% url 'edit_meal' meal.id %}">Edit</a> |
+                    <a class="text-danger" href="{% url 'delete_meal' meal.id %}">Delete</a>
+                </small>
                 {% endif %}
             </div>
         </div>
