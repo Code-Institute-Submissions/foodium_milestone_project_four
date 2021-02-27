@@ -175,6 +175,15 @@ nav form {
     overflow: hidden;
 }
 
+
+.meal_card {
+    box-shadow: 1px 1px 1px 1px #888888;
+    text-transform: capitalize;
+}
+
+.meal_card:hover {
+    box-shadow: 2px 2px 2px 2px #888888;
+}
 .fa-star {
     color: green;
 }
