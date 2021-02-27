@@ -95,6 +95,9 @@ nav form {
     background-color: var(--primary-color);
 }
 
+.header-container {
+    margin-top: 9rem;
+}
 
 .fas {
     margin-right: .4rem;
