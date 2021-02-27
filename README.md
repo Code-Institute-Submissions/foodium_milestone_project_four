@@ -42,7 +42,41 @@ I created this web application for the Full Stack Frameworks project of [**_Code
 
 The front-end display and functionality uses HTML, CSS and JavaScript. The back-end functionality uses Python, Django, SQLite3 and PostgreSQL.
 
-  ## Technologies Used
+## UX
+
+### Business Goals
+
+The business goals of Foodium is:
+- Provide quality meals to all its customers
+- Engage with customers via social media channels
+- Build brand awareness through social media
+- Have more than 1000 monthly active users on the website
+- Generate sales through a simple to use checkout platform
+
+
+### User Stories
+
+As a user, I want to be able to:
+
+- Browse meals on the website
+- Make a reservation at the  restaurant
+- Search for items
+- Add items to a cart
+- Get feedback when I interact with forms
+- View details about a meal I like on the restaurant's website
+- Create an account
+- View ratings on a meal to aid in my decision making
+- Contact the restaurant
+- Read a FAQ
+- Order a meal  with a credit card
+- See an overview of an order I just placed
+- Find information about past orders I have made
+
+### Style Rationale
+
+I decided  to keep the design simple for Foodium. Foodium is minimalistic in design with a focus on a good user experience to help users find items they are looking for, and have a seamless checkout experience. I wanted the site to be bright and have a magical feel to it. I kept the color scheme to a minimum.
+
+## Technologies Used
 
 - [**Balsamiq**](https://balsamiq.com/)
     - I've used **Balsamiq** to create wireframes of my website/app before building it.
