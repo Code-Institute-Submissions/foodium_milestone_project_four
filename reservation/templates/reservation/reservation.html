@@ -2,15 +2,22 @@
 {% load static %}
 
 {% block content %}
-<h2 class="text-center">Reservation</h2>
-
+<h2 class="text-center mt-5">Reservation</h2>
 <div class="container">
-    <div class="row">
-        <div class="col">
+    <div class="row justify-content-center mt-5">
+            <div class="col-12 col-md-8 col-lg-6 pb-5">
             <form action="" method="POST">
                 {% csrf_token %}
-                {{ form | crispy }}
-                <button type="submit">Submit</button>
+                {% if user.is_authenticated %}
+                <input type="hidden" name="user_id" value="{{ user.id }}">
+                {% else %}
+                <input type="hidden" name="user_id" value="0">
+                {% endif %}
+                <div class="form-group custom-form mt-3">
+                    {{ form | crispy }}
+                </div>
+                <!-- <button type="submit">Submit</button> -->
+                <input type="submit" value="Send" class="btn btn_primary btn-block rounded-0 mb-5">
             </form>
 
         </div>

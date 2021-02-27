@@ -48,9 +48,9 @@ def reserve_a_table(request):
             fail_silently=True
         )
 
-        messages.success(request, 'Contact form successfully submitted.\
+        messages.success(request, 'Reservation form successfully submitted.\
                                     We will be in touch!')
-        return redirect(reverse('contact_success'))
+        return redirect(reverse('reservation_success'))
 
     context = {
         'form': TableReservationForm
