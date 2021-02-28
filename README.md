@@ -5,7 +5,7 @@
 - [**About**](#About)
   - [Why This Project?](#Why-This-Project)
 - [**UX**](#UX)
-  - [Business Goals](#Business-Goals)
+  -[Business Goals](#Business-Goals)
   - [User Stories](#User-Stories)
   - [Style Rationale](#Style-Rationale)
   - [Wireframes](#Wireframes)
@@ -17,7 +17,7 @@
   - [Version Control](#Version-Control)
   - [Hosting](#Hosting)
 - [**Testing**](#Testing)
-  - [**Cart Details Testing**](#Cart-Details-Testing)
+  - [**Cart Details Testing**](#Card-Details-Testing)
   - [**Browsers**](#Browsers)
   - [**Devices**](#Devices)
   - [**Testing User Stories**](#Testing-User-Stories)
@@ -63,14 +63,13 @@ As a user, I want to be able to:
 - Browse meals on the website
 - Make a reservation at the  restaurant
 - Search for meals
-- Add meals to the cart
+- Add items to a cart
 - Get feedback when I interact with forms
 - View details about a meal I like on the restaurant's website
 - Create an account
-- Login and out of my account
 - View ratings on a meal to aid in my decision making
 - Contact the restaurant
-- Read a FAQ and ask a question
+- Read a FAQ
 - Order a meal  with a credit card
 - See an overview of an order I just placed
 - Find information about past orders I have made
@@ -102,7 +101,7 @@ The app uses Python logic to allow users to sign-in, or sign-up for a free accou
 
 ### Existing Features
 
-#### Navbar/Sidenav
+### Navbar/Sidenav
 
 - The navbar contains the brand logo which is on the left and it always redirects users back to the home page. 
 - The navbar also contains a search form which powers the search functionality of the website.
@@ -111,40 +110,40 @@ The app uses Python logic to allow users to sign-in, or sign-up for a free accou
 - A logged in user can access their profile or log out through the user icon.
 - The checkout icon displays a pricing summary of the user's current order in their cart.
 
-#### Registration Form
+### Registration Form
 
 - A user who is not logged in can create a new account using the register page. 
 - The registration requires an email address, email confirmation, a username (which must be unique), a password and password confirmation fields.
 - The form was created using Django Crispy Forms.
 
-#### Log in form
+### Log in form
 
 - A user who is registered can log in using their username and password.
 - The form was created using Django Crispy Forms.
 
-#### Menu
+### Menu
 
 - Meals and beverages on the website are displayed as thumbnail images with title and price displayed underneath each thumbnail.
 - When users click on a meal card, they are taken to the details page of the selected meal.
 - If a super user is logged in, they have easy access to edit or delete a meal.
 
-#### Delete modal 
+### Delete modal 
 - When the super user is logged in, they have the option to delete a product from the product listings.
 - A modal displays as an extra layer of defensive design when the super user clicks delete, to make sure that they want to delete this meal from the website.
 - I created the modal with Bootstrap modal popup.
 
-#### Meal details
+### Meal details
 
 - Each meal detail page contains price, people per serving, preparation time, and description. Due to the fact that beverages don't have this information, I added an 'if' statement on the product detail page to prevent the field to show if it does not contain information about the field.
 - Users can add a meal to their cart by clicking the "Add to cart" button or continue shopping by clicking the "Keep shopping" button.
 
-#### Toast notification
+### Toast notification
 
 - When a user selects a meal, they are notified of their selection through a success toast message.
 - They are then given the option to continue shopping or view their cart.
 
 
-#### Billing details
+### Billing details
 
 - The users profile page can only be accessed by a logged in user. 
 - The account page contains the user's billing information that they can edit and update. At the moment the feature is not complete because the billing information is supposed to automatically populate a new order form but it's not.
@@ -156,7 +155,7 @@ The app uses Python logic to allow users to sign-in, or sign-up for a free accou
    - Delivery
    - Grand total
 
-#### Toast notification
+### Toast notification
 
 - When a user updates their billing information they are notified of this change through a success toast message.
 
@@ -166,35 +165,35 @@ The app uses Python logic to allow users to sign-in, or sign-up for a free accou
 - Cart total, delivery total and grand total of the user's cart are reflected in the order summary.
 - A call to action button to proceed to checkout takes the user to the payment section.
 
-#### Toast notification
+### Toast notification
 
 - When a user adds a meal to their cart, a toast notification displays with the meal information.
 - A user is notified of delivery cost which is 39kr.
 - A call to action to visit the checkout is displayed below the item information.
 
-#### Checkout form
+### Checkout form
 
 - The checkout page features a form that needs to be filled out by the user.
 - All users needs to fill out their billing information.
 - Details required are name, address, email address, street address, town/city, postal code.
 
-#### Stripe
+### Stripe
 
 - Users can complete the checkout process by entering their card details.
 - Payment is handled through the secure Stripe API.
 - Once a user clicks to buy, and if successful payment is made, the user is taken to the checkout success page.
 
-#### Checkout success
+### Checkout success
 
 - The order confirmation page gives the customer all their order information.
 - An order number is generated on checkout.
 - The user is invited to continue ordering after checkout.
 
-#### About page
+### About page
 
 - The About page features a brief description about Foodium.
 
-#### Reservation page
+### Reservation page
 
 - The Reservation page contains a form for the user to fill in other to make a reservation to send to the Restaurant's admin.
 - Name, number, email, number of persons, date and time are all required fields.
@@ -203,22 +202,22 @@ The app uses Python logic to allow users to sign-in, or sign-up for a free accou
 - A reservation success page informs  the user their reservation will be reviewed within 24hours. 
 - At the moment there is no functionality to check availabity of table when a user is making a reservation that is why they do not get a confirm reservation message.
 
-#### Toast notification
+### Toast notification
 
 - When a reservation form form has been successfully submitted, the user is notified via toast message.
 
-#### Contact page
+### Contact page
 
 - The contact page contains a form for the user to fill in to send to the Restaurant's admin.
 - Name, subject, email address and message are all required fields.
 - An email is sent to the store admin's email address notifiying them of a new contact enquiry in the admin dashboard.
 - The message can be checked by logging in to the admin area.
 
-#### Toast notification
+### Toast notification
 
 - When a contact form has been successfully submitted, the user is notified via toast message.
 
-#### FAQ page
+### FAQ page
 
 - The FAQ pages contains four frequently asked questions.
 - The first question has an answer which clearly states that Foodium is a fictional restaurant. 
@@ -227,16 +226,16 @@ The app uses Python logic to allow users to sign-in, or sign-up for a free accou
 
 ## Features Left To Implement
 
-#### Additional login methods
+### Additional login methods
 - For a future update, I would like to include the ability for users to login via a social media platform such as Facebook or google. 
 
-#### Additional checkout methods
+### Additional checkout methods
 - For a future update, I would like to include the ability for users to checkout via PayPal as it is a popular checkout method.
 
-#### Two Step verification
+### Two Step verification
 - With cybercrime on the rise and the recent trend of many bank applications introducing two-step verification, this would be a nice extra layer of security for users when logging in.
 
-#### Custom 404 and 500 pages
+### Custom 404 and 500 pages
 - Create and implement custom pages for HTML status codes of 404 (Page Not Found) and 500 (Internal Server Error). Given the time constraints, this was not possible to implement. I tried to implement a 404 but ended up deleting the template and related code because it was not fully functional. 
 
 ## Technologies Used
@@ -304,12 +303,10 @@ This web application was tested in the following browsers to ensure the web appl
 
 ### Devices
  This web application was tested in the following devices to ensure the web application is compatible and responsive.
- * IPhone 11
- * IPad Air 
- * MacBook Pro
+ * IPhone 8 Plus
  * Huawei P30 Pro 
  * Huawei Mediapad T5
-
+ * MacBook Pro
 
 ### Testing User Stories
 
@@ -343,19 +340,6 @@ This web application was tested in the following browsers to ensure the web appl
 3. Fill in the Register Form with Email Address, Email Address Confirmation, Username, Password and Password(again).
 4. Click on the "Sign Up" button.
 
-- **As a user, I want to be able to login and out of my account**
-
-LOGIN 
-1. Click on the the user icon in the navbar.
-2. Click on "Login" in dropdown list.
-3. Fill in username(or email) and password.
-4. Click on "Sign In" button.
-
-LOGOUT 
-1. Click on the the user icon in the navbar.
-2. Click on "Logout" in dropdown list.
-3. Click on the "Sign Out" button.
-
 - **As a user, I want to be able to view ratings on a meal to aid in my decision making**
 1. Click on the meal you are interested in.
 
@@ -364,7 +348,7 @@ LOGOUT
 2. Fill in the form with Name, Subject, Email Address and Message.
 3. Click on the "Send" button.
 
-- **As a user, I want to be able to read a FAQ and ask a question**
+- **As a user, I want to be able to read a FAQ**
 1. Click on "FAQ" in the footer.
 2. Click on the question you would like to see the answer.
 3. Click on "Contact Us" below the FAQ if you have different question.
@@ -383,7 +367,7 @@ LOGOUT
 1. Click on the user icon in the navbar.
 2. Click on "My Profile"
 
-### Manual Testing
+## Manual Testing
 
 **NavBar** 
 * I tested that the navbar brand(FOODIUM) redirects user to the home page.
@@ -395,6 +379,7 @@ LOGOUT
 * I tested that when the user icon is clicked, a dropdown appears with "Register" and "Login" option.
 * I tested that when a user is logged in, the user icon dropdown changes with "Meal Management", "My Profile" and "Logout" Option.
 * I tested that when the cart icon is clicked, users are taken to the shopping cart page.
+
 
 **Search**
 * I tested that the search bar shows the user meals related to the word they typed.
@@ -588,13 +573,11 @@ My static and media folders are hosted in my s3 bucket for the live version of t
 
 ## Credits
 
-### Content
+### Contents
 
-* Most of this project's us functionality and code was taken from [Code Institute's](https://codeinstitute.net/) Boutique Ado Project. I had to customize it for my app and added additional features.
+* Most of this project's funu functionality was taken from [Code Institute's](https://codeinstitute.net/) Boutique Ado Project. I had to customize it for my app.
 
 * The Modal Structure HTML and JavaScript code was taken from [Bootstrap Modals](https://getbootstrap.com/).
-
-* Checkout code taken from [Stripe](https://stripe.com/en-dk).
 
 
 ### Media
@@ -604,16 +587,19 @@ None of the images belong to me.
 
 * The favicon on my website was created using [favicon.cc](https://www.favicon.cc/)
 
-* Meal images were taken from [Red Bamboo](https://red-bamboo.square.site/?fbclid=IwAR0JbLypnlU62XXLT-XYuNmGN8FVHmFw8RDdpO8MDyvadX2NQvFsUn8XbMc) restaurant.
+* Meal images were taken from [Red Bamboo](https://red-bamboo.square.site/?fbclid=IwAR0JbLypnlU62XXLT-XYuNmGN8FVHmFw8RDdpO8MDyvadX2NQvFsUn8XbMc) restaurant. I will use the images only for educational purpose.
 
 * Home page image was taken from [Pexels](https://www.pexels.com/search/restaurant/?fbclid=IwAR2Ams9t0fi60vOMxRXpuPGCeCf-R4mGXkSrd4xVP-cuqzb3WVJO5AkwX5M).
 
 ## Acknowledgements
 
 * A special thanks to my mentor, Sandeep Aggarwal, for his feedback on my project's scope, design and functionality.
-* Code Institute's Tutor assistance has helped my a lot in solving and understanding the cause of the errors and issues I was facing.
+* Code Institute's Tutor assistance has helped me a lot in pointing me towards the right direction to understanding the cause of the errors and issues I was facing.
 * I took inspiration for this project from [Hello World Apparel](https://github.com/orlamadden/hello-world-apparel).
 
 ## Disclaimer
 
 This project is for educational purposes only.
+
+
+[Back to top ↑](#Table-Of-Content)
