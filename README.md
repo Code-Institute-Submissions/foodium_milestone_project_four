@@ -74,7 +74,14 @@ As a user, I want to be able to:
 
 ### Style Rationale
 
-I decided  to keep the design simple for Foodium. Foodium is minimalistic in design with a focus on a good user experience to help users find items they are looking for, and have a seamless checkout experience. I wanted the site to be bright and have a magical feel to it. I kept the color scheme to a minimum.
+I decided to keep the design simple for Foodium. Foodium is minimalistic in design with a focus on a good user experience to help users find items they are looking for, and have a seamless checkout experience. I wanted the site to be bright and have a magical feel to it. I kept the color scheme to a minimum.
+
+### Wireframes
+To create this project's wireframes I used [Balsamiq](https://balsamiq.com/).
+
+During the development process some changes were made.
+
+
 
 ## Technologies Used
 
