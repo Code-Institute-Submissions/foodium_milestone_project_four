@@ -34,7 +34,7 @@
 
 ## About
 
-This web application is a fictional restaurant based in Copenhagen the capital of Denmark. The site allows users to perfom many actions such as order a meal, contact the restaurant, make a reservation, and create an account. And the site allows the restaurant owner or authorized personal to perfom certain actions such as add, edit and delete meals from the website's menu.
+This web application is a fictional restaurant based in Copenhagen the capital of Denmark. The site allows users to perform many actions such as order a meal, contact the restaurant, make a reservation, and create an account. And the site allows the restaurant owner or authorized personal to perform certain actions such as add, edit and delete meals from the website's menu.
 
 ### Why This Project?
 
@@ -77,10 +77,19 @@ As a user, I want to be able to:
 I decided to keep the design simple for Foodium. Foodium is minimalistic in design with a focus on a good user experience to help users find items they are looking for, and have a seamless checkout experience. I wanted the site to be bright and have a magical feel to it. I kept the color scheme to a minimum.
 
 ### Wireframes
-To create this project's wireframes I used [Balsamiq](https://balsamiq.com/).
+The wireframes used in this project were built using Balsamiq Wire[Balsamiq](https://balsamiq.com/). These were the first versions but in the development process, there were many changes.
 
 During the development process some changes were made.
 
+* [Home Page](https://github.com/Takaforyannick30/foodium_milestone_project_four/blob/master/static/wireframes/home%20page%20preview.pdf)
+* [Login Page](https://github.com/Takaforyannick30/foodium_milestone_project_four/blob/master/static/wireframes/login%20page%20preview.pdf)
+* [Register Page](https://github.com/Takaforyannick30/foodium_milestone_project_four/blob/master/static/wireframes/register%20page%20preview.pdf)
+* [Menu Page](https://github.com/Takaforyannick30/foodium_milestone_project_four/blob/master/static/wireframes/menu%20page%20preview.pdf)
+* [Single Meal Page](https://github.com/Takaforyannick30/foodium_milestone_project_four/blob/master/static/wireframes/single%20meal%20page%20preview.pdf)
+* [Shopping Cart Page](https://github.com/Takaforyannick30/foodium_milestone_project_four/blob/master/static/wireframes/shopping%20cart%20preview.pdf)
+* [Checkout Page](https://github.com/Takaforyannick30/foodium_milestone_project_four/blob/master/static/wireframes/checkout%20page%20preview.pdf)
+* [Reservation Page](https://github.com/Takaforyannick30/foodium_milestone_project_four/blob/master/static/wireframes/reservation%20page%20preview.pdf)
+* [Contact Page](https://github.com/Takaforyannick30/foodium_milestone_project_four/blob/master/static/wireframes/contact%20page%20preview.pdf)
 
 
 ## Technologies Used
