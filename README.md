@@ -63,13 +63,14 @@ As a user, I want to be able to:
 - Browse meals on the website
 - Make a reservation at the  restaurant
 - Search for meals
-- Add items to a cart
+- Add meals to the cart
 - Get feedback when I interact with forms
 - View details about a meal I like on the restaurant's website
 - Create an account
+- Login and out of my account
 - View ratings on a meal to aid in my decision making
 - Contact the restaurant
-- Read a FAQ
+- Read a FAQ and ask a question
 - Order a meal  with a credit card
 - See an overview of an order I just placed
 - Find information about past orders I have made
@@ -303,10 +304,12 @@ This web application was tested in the following browsers to ensure the web appl
 
 ### Devices
  This web application was tested in the following devices to ensure the web application is compatible and responsive.
- * IPhone 8 Plus
+ * IPhone 11
+ * IPad Air 
+ * MacBook Pro
  * Huawei P30 Pro 
  * Huawei Mediapad T5
- * MacBook Pro
+
 
 ### Testing User Stories
 
@@ -340,6 +343,19 @@ This web application was tested in the following browsers to ensure the web appl
 3. Fill in the Register Form with Email Address, Email Address Confirmation, Username, Password and Password(again).
 4. Click on the "Sign Up" button.
 
+- **As a user, I want to be able to login and out of my account**
+
+LOGIN 
+1. Click on the the user icon in the navbar.
+2. Click on "Login" in dropdown list.
+3. Fill in username(or email) and password.
+4. Click on "Sign In" button.
+
+LOGOUT 
+1. Click on the the user icon in the navbar.
+2. Click on "Logout" in dropdown list.
+3. Click on the "Sign Out" button.
+
 - **As a user, I want to be able to view ratings on a meal to aid in my decision making**
 1. Click on the meal you are interested in.
 
@@ -348,7 +364,7 @@ This web application was tested in the following browsers to ensure the web appl
 2. Fill in the form with Name, Subject, Email Address and Message.
 3. Click on the "Send" button.
 
-- **As a user, I want to be able to read a FAQ**
+- **As a user, I want to be able to read a FAQ and ask a question**
 1. Click on "FAQ" in the footer.
 2. Click on the question you would like to see the answer.
 3. Click on "Contact Us" below the FAQ if you have different question.
@@ -367,7 +383,7 @@ This web application was tested in the following browsers to ensure the web appl
 1. Click on the user icon in the navbar.
 2. Click on "My Profile"
 
-## Manual Testing
+### Manual Testing
 
 **NavBar** 
 * I tested that the navbar brand(FOODIUM) redirects user to the home page.
