@@ -1,76 +1,66 @@
 {% extends 'base.html' %}
 {% load static %}
-
-
+<!-- About us page -->
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <h2 class="page_heading text-center mt-5">About us</h2>
-            </div>
+<div class="about_us_section">
+    <div class="overlay">
+        <div>
+            <h1 class="home-intro">
+                <strong class="text-center">Our Most Valuable Asset</strong>
+            </h1>
+            <h3 class="text-center">Always Friendly </h3>
         </div>
     </div>
-
-
+</div>
 <div class="container">
-<section>
     <div class="row">
-        <div class="col-12 col-lg-6 col-md-6 col-sm-12 foodium_interior">
-         <img src="{% static 'img/foodium_interior_2.jpg' %}" alt="foodium interior">
+        <div class="col-sm-12">
+            <h2 class="page_heading text-center mt-5 mb-5">About us</h2>
+        </div>
+    </div>
+</div>
+<div class="container mb-5">
+
+    <div class="row">
+        <div class="col-12 col-lg-6 col-md-6 col-sm-12 about_page_pictue">
+            <img class="about_page_picture" src="{% static 'img/foodium_interior_2.jpg' %}" alt="foodium interior">
         </div>
         <div class="col-12 col-lg-6 col-md-6 col-sm-12">
             <h2 class="page_heading text-center">Our Story</h2>
-            <p>Situated in Farum Midpunt , Vasi and Chef Tikelo Tre  celebrated Foodium features Copenhagen contemporary cuisine. Foodium  serves a nightly-changing tasting menu highlighting the restaurant's love for luxury taste</p>
+            <p class="about_page_text">Situated in Farum Midpunt , Vasi and Chef Tikelo Tre celebrated Foodium features
+                Copenhagen contemporary cuisine. Foodium serves a nightly-changing tasting menu highlighting the
+                restaurant's love for luxury taste</p>
             <h2 class="page_heading text-center">Accolades</h2>
-            <p>Our head Chef Tikelo Tre was named “Best Chef: Pacific” by the James Beard Foundation in 2020. Foodium was awarded its first Michelin star in 2019 and holds four stars from the Copenhagen rating. Foodium is a proud member of Relais & Châteaux, an association of the world's most celebrated restaurants and luxury hotels</p>
+            <p class="about_page_text">Our head Chef Tikelo Tre was named “Best Chef: Pacific” by the James Beard
+                Foundation in 2020. Foodium was awarded its first Michelin star in 2019 and holds four stars from the
+                Copenhagen rating. Foodium is a proud member of Relais & Châteaux, an association of the world's most
+                celebrated restaurants and luxury hotels</p>
         </div>
     </div>
-
-</section>
-
-<section>
-    <h2 class="text-center mt-5 mb-5">Meet Our Chefs</h2>
     <div class="row">
-        <div class="col-12 col-lg-4 col-md-6 col-sm-12">
-            <div class="card chef_card">
-                <img src="{% static 'img/foodium_chef_1.jpg' %}" class="card-img-top" alt="foodium chef">
-                <div class="card-body">
-                    <p class="card-text text-center">Tikelo Tre (Head Chef)
-                        </p>
+        <div class="col-12 col-lg-6 col-md-6 col-sm-12">
+            <h2 class="page_heading mt-5 text-center">Meet our Head Chef</h2>
+            <p class="about_page_text ">"My father raised me with the idea that you always have to do better than the
+                person next to you. As a black man, you have to perform three times better than that person. I saw that
+                in kitchens right away: we were the cooks, but we were never the chefs, never the operators.</p>
+            <p class="about_page_text "> My parents tried to sell me on the military instead of hospitality, but I was
+                never going to be that guy. So my mom said: “I want you to learn the trade as a career, not a job." -
+                Jerome Grant</p>
+        </div>
+        <div class="col-12 col-lg-6 col-md-6 col-sm-12">
+            <img class="about_page_picture" src="{% static 'img/foodium_chef_2.jpg' %}" alt="head chef">
 
-                        <p>In 2000 he featured in Master Chef Astralia and emerged victorious.</p>
-                </div>
-            </div>
         </div>
-        <div class="col-12 col-lg-4 col-md-6 col-sm-12">
-            <div class="card chef_card" >
-                <img src="{% static 'img/foodium_chef_2.jpg' %}" class="card-img-top" alt="foodium chef">
-                <div class="card-body">
-                    <p class="card-text text-center"> Scopy Davera (Desert Expert).</p>
-                    <p>He has 10 years of experience in the food catering industry.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-lg-4 col-md-4  col-sm-12">
-            <div class="card chef_card" >
-                <img src="{% static 'img/foodium_chef_3.jpg' %}" class="card-img-top" alt="foodium chef">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content. Lorem ipsum dolor sit amet consectetur a </p>
-                </div>
-            </div>
-        </div>
-        
     </div>
-</section>
+
 </div>
-    
+
 {% endblock %}
