@@ -47,10 +47,10 @@ class TableReservationForm(forms.ModelForm):
             'placeholder': 'Enter number of persons'
         })
     )
-    date = forms.CharField(
+    date = forms.DateField(
         required=True,
         label='',
-        widget=forms.TextInput(attrs={
+        widget=forms.DateInput(attrs={
             'class': 'form-control border-dark rounded-0',
             'placeholder': 'Enter Date'
         })

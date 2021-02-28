@@ -34,11 +34,11 @@
 
 ## About
 
-This web application is a fictional restaurant based in Copenhagen the capital of Denmark. The site allows users to perform many actions such as order a meal, contact the restaurant, make a reservation, and create an account. And the site allows the restaurant owner or authorized personal to perform certain actions such as add, edit and delete meals from the website's menu.
+This web application is a fictional restaurant based in Copenhagen the capital of Denmark. The site allows users to perform many actions such as order a meal, contact the restaurant, make a reservation, and create an account. The site allows the restaurant owner or authorized personal to perform certain actions such as add, edit and delete meals from the website's menu.
 
 ### Why This Project?
 
-I created this web application for the Full Stack Frameworks project of [**_Code Institute's_**](https://codeinstitute.net/) Full Stack Software Development course.The project scope was to create a web application for a restaurant, which allows users to order meals and pay with their credit card.
+I created this web application for the Full Stack with Django Project of [**_Code Institute's_**](https://codeinstitute.net/) Full Stack Software Development course. The project scope was to create a web application for a restaurant, which allows users to order meals and pay with their credit card.
 
 The front-end display and functionality uses HTML, CSS and JavaScript. The back-end functionality uses Python, Django, SQLite3 and PostgreSQL.
 
@@ -46,7 +46,7 @@ The front-end display and functionality uses HTML, CSS and JavaScript. The back-
 
 ### Business Goals
 
-The business goals of Foodium is:
+The business goals of Foodium is to:
 - Provide quality meals to all its customers
 - Engage with customers via social media channels
 - Build brand awareness through social media
@@ -60,7 +60,7 @@ As a user, I want to be able to:
 
 - Browse meals on the website
 - Make a reservation at the  restaurant
-- Search for items
+- Search for meals
 - Add items to a cart
 - Get feedback when I interact with forms
 - View details about a meal I like on the restaurant's website
@@ -77,7 +77,7 @@ As a user, I want to be able to:
 I decided to keep the design simple for Foodium. Foodium is minimalistic in design with a focus on a good user experience to help users find items they are looking for, and have a seamless checkout experience. I wanted the site to be bright and have a magical feel to it. I kept the color scheme to a minimum.
 
 ### Wireframes
-The wireframes used in this project were built using Balsamiq Wire[Balsamiq](https://balsamiq.com/). These were the first versions but in the development process, there were many changes.
+The wireframes used in this project were built using Balsamiq Wireframes [Balsamiq](https://balsamiq.com/). These were the first versions but in the development process, there were many changes.
 
 During the development process some changes were made.
 
@@ -91,6 +91,152 @@ During the development process some changes were made.
 * [Reservation Page](https://github.com/Takaforyannick30/foodium_milestone_project_four/blob/master/static/wireframes/reservation%20page%20preview.pdf)
 * [Contact Page](https://github.com/Takaforyannick30/foodium_milestone_project_four/blob/master/static/wireframes/contact%20page%20preview.pdf)
 
+
+### Functionality
+
+The app uses Python logic to allow users to sign-in, or sign-up for a free account. The app offers CRUD operations to allow users to create, read, update, and delete blog posts. In addition, users can view all menu, add to their cart and make a purchase after filling their delivery information which is expected to be in Copenhagen. I will like to state that every time I mention meal, I mean beverages as well.
+
+### Existing Features
+
+- **Navbar/Sidenav Links** - The navbar and sidenav links vary depending on whether the user is logged in or not. If the user isn't logged in, the Home, Menu, Reservation, User icon containing Register and Login, and shopping cart  links are shown on the navigation bar. When the user is logged in, the User icon will show My Profile and Logout.And in addition, if the user is super user it will show Meal Management.
+
+#### Navbar/Sidenav
+
+- The navbar contains the brand logo which is on the left and it always redirects users back to the home page. 
+- The navbar also contains a search form which powers the search functionality of the website.
+- The navbar and sidenav links vary depending on whether the user is logged in or not. If the user isn't logged in, the Home, Menu, Reservation, User icon containing Register and Login, and shopping cart  links are shown on the navigation bar. When the user is logged in, the User icon will show My Profile and Logout.And in addition, if the user is super user it will show Meal Management.
+- A user who is currently logged out can access the registration page or log in page through the user icon. 
+- A logged in user can access their profile or log out through the user icon.
+- The checkout icon displays a pricing summary of the user's current order in their cart.
+
+#### Registration Form
+
+- A user who is not logged in can create a new account using the register page. 
+- The registration requires an email address, email confirmation, a username (which must be unique), a password and password confirmation fields.
+- The form was created using Django Crispy Forms.
+
+#### Log in form
+
+- A user who is registered can log in using their username and password.
+- The form was created using Django Crispy Forms.
+
+#### Menu
+
+- Meals and beverages on the website are displayed as thumbnail images with title and price displayed underneath each thumbnail.
+- When users click on a meal card, they are taken to the details page of the selected meal.
+- If a super user is logged in, they have easy access to edit or delete a meal.
+
+#### Delete modal 
+- When the super user is logged in, they have the option to delete a product from the product listings.
+- A modal displays as an extra layer of defensive design when the super user clicks delete, to make sure that they want to delete this meal from the website.
+- I created the modal with Bootstrap modal popup.
+
+#### Meal details
+
+- Each meal detail page contains price, people per serving, preparation time, and description. Due to the fact that beverages don't have this information, I added an 'if' statement on the product detail page to prevent the field to show if it does not contain information about the field.
+- Users can add a meal to their cart by clicking the "Add to cart" button or continue shopping by clicking the "Keep shopping" button.
+
+#### Toast notification
+
+- When a user selects a meal, they are notified of their selection through a success toast message.
+- They are then given the option to continue shopping or view their cart.
+
+
+#### Billing details
+
+- The users profile page can only be accessed by a logged in user. 
+- The account page contains the user's billing information that they can edit and update. At the moment the feature is not complete because the billing information is supposed to automatically populate a new order form but it's not.
+- An order summary is visibile if user's have made a purchase in the past. This will contain:
+   - Order number
+   - Date an item was purchased
+   - Item(s) purchased
+   - Order total
+   - Delivery
+   - Grand total
+
+#### Toast notification
+
+- When a user updates their billing information they are notified of this change through a success toast message.
+
+- The shopping cart page features a summary of all the meals the user has added to their shopping cart.
+- Each item includes an image, name,  unit price and total price.
+- The user has the ability to adjust the quantity in their cart. A user can also remove an item from their cart. When the quantity is updated. the subtotal will reflect the change.
+- Cart total, delivery total and grand total of the user's cart are reflected in the order summary.
+- A call to action button to proceed to checkout takes the user to the payment section.
+
+#### Toast notification
+
+- When a user adds a meal to their cart, a toast notification displays with the meal information.
+- A user is notified of delivery cost which is 39kr.
+- A call to action to visit the checkout is displayed below the item information.
+
+#### Checkout form
+
+- The checkout page features a form that needs to be filled out by the user.
+- All users needs to fill out their billing information.
+- Details required are name, address, email address, street address, town/city, postal code.
+
+#### Stripe
+
+- Users can complete the checkout process by entering their card details.
+- Payment is handled through the secure Stripe API.
+- Once a user clicks to buy, and if successful payment is made, the user is taken to the checkout success page.
+
+#### Checkout success
+
+- The order confirmation page gives the customer all their order information.
+- An order number is generated on checkout.
+- The user is invited to continue ordering after checkout.
+
+### About page
+
+- The About page features a brief description about Foodium.
+
+### Reservation page
+
+- The Reservation page contains a form for the user to fill in other to make a reservation to send to the Restaurant's admin.
+- Name, number, email, number of persons, date and time are all required fields.
+- An email is sent to the store admin's email address notifiying them of a new contact enquiry in the admin dashboard.
+- The reservation can be checked by logging in to the admin area.
+- A reservation success page informs  the user their reservation will be reviewed within 24hours. 
+- At the moment there is no functionality to check availabity of table when a user is making a reservation that is why they do not get a confirm reservation message.
+
+#### Toast notification
+
+- When a reservation form form has been successfully submitted, the user is notified via toast message.
+
+### Contact page
+
+- The contact page contains a form for the user to fill in to send to the Restaurant's admin.
+- Name, subject, email address and message are all required fields.
+- An email is sent to the store admin's email address notifiying them of a new contact enquiry in the admin dashboard.
+- The message can be checked by logging in to the admin area.
+
+#### Toast notification
+
+- When a contact form has been successfully submitted, the user is notified via toast message.
+
+### FAQ page
+
+- The FAQ pages contains four frequently asked questions.
+- The first question has an answer which clearly states that Foodium is a fictional restaurant. 
+- At the bottom of the form users are asked to 'contact us' if their question in mind was not answered.
+
+
+
+## Recommendations for future implementation
+
+#### Additional login methods
+- For a future update, I would like to include the ability for users to login via a social media platform such as Facebook or google. 
+
+#### Additional checkout methods
+- For a future update, I would like to include the ability for users to checkout via PayPal as it is a popular checkout method.
+
+#### Two Step verification
+- With cybercrime on the rise and the recent trend of many bank applications introducing two-step verification, this would be a nice extra layer of security for users when logging in.
+
+#### Custom 404 and 500 pages
+- Create and implement custom pages for HTML status codes of 404 (Page Not Found) and 500 (Internal Server Error). Given the time constraints, this was not possible to implement. I tried to implement a 404 but ended up deleting the template and related code because it was not fully functional. 
 
 ## Technologies Used
 
