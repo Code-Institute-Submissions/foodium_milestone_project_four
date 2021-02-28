@@ -160,6 +160,14 @@ h1 {
 
 .btn_outline_primary {
     background: white;
+    color: var(--secondary-color)!important; /* use important to override link colors for <a> elements */
+    border: 1px solid var(--secondary-color);
+}
+
+.btn_outline_primary:hover,
+.btn_outline_primary:active,
+.btn_outline_primary:focus {
+    background: white;
     color: var(--primary-color)!important; /* use important to override link colors for <a> elements */
     border: 1px solid var(--primary-color);
 }
@@ -293,7 +301,7 @@ footer{
     flex-shrink: 0;
     background-color: var(--primary-color);
     color: #ffffff;  
-    border-top: 2px solid var(--secondary-color);    
+    border-top: 2px solid var(--secondary-color);  
 }
 
 footer a {
