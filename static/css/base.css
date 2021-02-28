@@ -25,7 +25,7 @@ main {
   flex: 1 0 auto;
 }
 
-/* Global variables */
+/* --------------------------------------Global variables */
 :root {
     --primary-color:#0B0E13;
     --secondary-color: #B48C80;
@@ -48,6 +48,7 @@ main {
     color: var(--white);
 }
 
+/* --------------------------------Navigation bar */
 .navbar {
     border-bottom: 2px solid var(--secondary-color);
 }
@@ -104,7 +105,7 @@ nav form {
     margin-right: .4rem;
 }
 
-/* Home page  */
+/*-------------------------------------- Home page  */
 
 .home-section {
   position: relative;
@@ -141,10 +142,7 @@ h1 {
   z-index: 1;
 }
 
-
-
-
-/* buttons */
+/* ------------------------------------------------buttons */
 
 .btn_primary {
     background: var(--secondary-color);
@@ -160,7 +158,7 @@ h1 {
 
 .btn_outline_primary {
     background: white;
-    color: var(--secondary-color)!important; /* use important to override link colors for <a> elements */
+    color: var(--secondary-color)!important; 
     border: 1px solid var(--secondary-color);
 }
 
@@ -168,12 +166,11 @@ h1 {
 .btn_outline_primary:active,
 .btn_outline_primary:focus {
     background: white;
-    color: var(--primary-color)!important; /* use important to override link colors for <a> elements */
+    color: var(--primary-color)!important; 
     border: 1px solid var(--primary-color);
 }
 
-
-/* Card to display meals */
+/*-------------------------------------- Card to display meals */
 .meal_image {
     height: 15rem;
     overflow: hidden;
@@ -210,9 +207,7 @@ h1 {
     cursor: pointer;
 }
 
-/* .logo_font {
-    font-family: --var;
-} */
+
 
 /* -------------------FAQ */
 
@@ -223,7 +218,6 @@ h1 {
     color: #000;
     margin: .8rem;
 }
-
 
 .card-header {
     background-color: rgba(11, 14, 19, 0.1);
@@ -245,7 +239,7 @@ h1 {
   font-size: 1.5rem !important;
 }
 
-/* ----------------About us */
+/* ---------------------------About us */
 
 
 .about_us_section {
@@ -260,13 +254,10 @@ h1 {
   margin-top: -5rem;
 }
 
-
-
 .about_page_picture {
     width: 100%;
     height: 700px;
 }
-
 
 .pages  a {
     font-size: 1.5rem;
@@ -288,14 +279,14 @@ h1 {
     color: var(--secondary-color);
 }
 
-/* -----------------About page */
+/* About page */
 
 .about_page_text {
     font-size: 1.3rem;
     letter-spacing: 2px;
 }
 
-/* Footer */
+/*------------------------------------------ Footer */
 
 footer{
     flex-shrink: 0;
@@ -345,9 +336,6 @@ hr {
 .custom-toast {
     overflow: visible;
 }
-
-
-
 
 .toast-capper {
     height: 2px;
@@ -405,8 +393,14 @@ hr {
     overflow-y: auto;
 }
 
+/*---------------------------------------------- Media Queries */
 
-/* Media Queries */
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
 
 /* For all devices with screen size 991px and below */
 @media only screen and (max-width: 1112px) {
@@ -415,12 +409,14 @@ hr {
     margin-left: 5%;
     background-color: var(--secondary-color);
 }
-
 }
-
 
 /* For all devices with screen size 991px and below */
 @media only screen and (max-width: 991px) {
+
+h1 {
+    margin-top: 25%;
+} 
 
 .my_account {
     margin-left: 0;  
@@ -436,10 +432,6 @@ nav form {
     font-size: 1rem;
 }
 
-/* footer ul li {
- margin: 5px auto;
- } */
-
  .social-icons {
      text-align: center;
  }
@@ -448,8 +440,43 @@ nav form {
     justify-content: center;
 }
 
+  .btn_outline_primary.roundeed-0,
+    .btn.btn_primary.rounded-0 {
+        padding: .375rem .375rem;
+    } 
+
+
+    .btn.btn_outline_primary.rounded-0.btn-lg,
+    .btn.btn_primary.rounded-0.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    } 
+
+    .increase-qty, .decrease-qty {
+        padding: .25rem .5rem !important;
+    }
 
 }
+
+/* For all devices with screen size 991px and below */
+@media only screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 2.5rem;
+        margin-top: 50%;
+    }
+}
+
+/* For small devices  */
+@media only screen and (max-width: 400px) {
+
+    h1 {
+        /* padding-top: 40%; */
+        font-size: 2.5rem;
+        margin-top: 50%;
+    }
+
+} 
 
 /* Allauth form formatting */
 

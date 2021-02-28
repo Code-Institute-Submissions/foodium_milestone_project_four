@@ -283,7 +283,164 @@ The app uses Python logic to allow users to sign-in, or sign-up for a free accou
 - [**Heroku**](https://www.heroku.com/)
     - I've used **Heroku** as the hosting platform to deploy my app.
 
-  ## Deployment
+## Testing
+
+### Cart Details Testing
+To test the website's checkout functionality, use the following payment credentials:
+
+- **Card number:** 4242 4242 4242 4242
+- **Expiry date:** Any date in the future
+- **CV2 number:** Any 3 digits
+- **ZIP:** Any 5 digits
+
+### Browsers
+This web application was tested in the following browsers to ensure the web application is compatible and responsive.
+ * Chrome
+ * Mozilla
+ * Safari
+ * Opera 
+ * Internet Explorer
+
+### Devices
+ This web application was tested in the following devices to ensure the web application is compatible and responsive.
+ * IPhone 8 Plus
+ * Huawei P30 Pro 
+ * Huawei Mediapad T5
+ * MacBook Pro
+
+### Testing User Stories
+
+- **As a user, I want to be able to browse meals on the website**
+1. Click on "Menu" dropdown on the navbar.
+2. Select food category you want to browse.
+
+- **As a user, I want to be able to make a reservation at the restaurant**
+1. Click on "Reservation" link on the navbar.
+2. Fill in the form with Name, Phone Number, Email, Number of Persons, Date and Time.
+3. Click on the "Send" button.
+
+- **As a user, I want to be able to search for meals**
+1. Type a word related to the meal you are looking for.
+2. Click on the "Search" button.
+
+- **As a user, I want to be able to add items to a cart**
+1. Click on the meal you would like to add to your cart.
+2. Click on "Add To Cart" button.
+
+- **As a user, I want to be able to get feedback when I interact with forms**
+1. Fill in a form with correct information.
+2. Click on the "Send" button.
+
+- **As a user, I want to be able to view details about a meal I like on the restaurant's website**
+1. Click on the meal you would like to get more information about.
+
+- **As a user, I want to be able to create an account**
+1. Click on the user icon in the navbar.
+2. Click on "Register"
+3. Fill in the Register Form with Email Address, Email Address Confirmation, Username, Password and Password(again).
+4. Click on the "Sign Up" button.
+
+- **As a user, I want to be able to view ratings on a meal to aid in my decision making**
+1. Click on the meal you are interested in.
+
+- **As a user, I want to be able to contact the restaurant**
+1. Click on "Contact Us" link in the footer.
+2. Fill in the form with Name, Subject, Email Address and Message.
+3. Click on the "Send" button.
+
+- **As a user, I want to be able to read a FAQ**
+1. Click on "FAQ" in the footer.
+2. Click on the question you would like to see the answer.
+3. Click on "Contact Us" below the FAQ if you have different question.
+
+- **As a user, I want to be able to order a meal with a credit card**
+1. Go to your cart.
+2. Click on "Secure Checkout".
+3. Fill in your personal information.
+4. Click "Complete Order"
+
+- **As a user, I want to be able to see an overview of an order I just placed**
+1. Click on the user icon in the navbar.
+2. Click on "My Profile"
+
+- **As a user, I want to be able to find information about past orders I have made**
+1. Click on the user icon in the navbar.
+2. Click on "My Profile"
+
+## Manual Testing
+
+**NavBar** 
+* I tested that the navbar brand(FOODIUM) redirects user to the home page.
+* I tested that the navbar collapses to a hamburger menu in smaller screen devices.
+* I tested that when the Home icon is clicked, users are taken to the home page.
+* I tested that "Meals" dropdown menu in the navbar shows all food categories (Starters, Burgers, Main Course, Beverages, All Meals).
+* I tested that when a food category is clicked, it shows all meals related to that category.
+* I tested that when the reservation icon is clicked, users are taken to the reservation form.
+* I tested that when the user icon is clicked, a dropdown appears with "Register" and "Login" option.
+* I tested that when a user is logged in, the user icon dropdown changes with "Meal Management", "My Profile" and "Logout" Option.
+* I tested that when the cart icon is clicked, users are taken to the shopping cart page.
+
+
+**Search**
+* I tested that the search bar shows the user meals related to the word they typed.
+
+**Login/Logout**
+* I logged in from several fake user accounts using the username(or email) and password and tested the "Login" button.
+* I tested the log out funtion from all accounts by clicking on the "Logout" button.
+
+**Register**
+* I tested the registration form by creating several fake user accounts with an Email Address, Emails Address Confirmation, Username, Password, Password(again) and tested the "Sign Up" button.
+
+**Menu/Meal Page**
+* I tested that the "View Menu" button in the home page, takes user to the menu page.
+* I tested that when a user clicks on a specific meal , it takes them to the meal detail page where they can see Meals Name, Price, Servings, Preparation Time, Ratings and Description.
+* I tested that on the meal details page, when a user clicks on the "+" button, the quantity increases.
+* I tested that on the meal details page, when a user clicks on the "-" button, the quantity reduces.
+* I tested that the "Add To Cart" button is clicked, it adds the meal into the users cart.
+* I tested that the "Keep Shopping" button redirects user to the Meals page.
+* I tested that when a meal is being added to the cart, a toast appears displaying products added, delivery fee and I tested "Go To Secure Checkout" button.
+
+**Reservation**
+* I tested the reservation form by filling it in with Name, Phone Number, Email, Number of Persons, Date, Time and clicking on the "Send" button.
+
+**My Profile**
+* I tested that in the "My Profile " page the user can see and edit their personal information (Phone Number, Address) and tested the "Update Information" button.
+* I tested that in "My Profile" page Order History table is being displayed. Users can see Order Number, Date, Items and Order Total.
+* I tested that when a user clicks on the Order Number, it shows further information about the specific order they placed (Name, Delivery Address, Phone Number, Delivery Fee and Grand Total).
+* I tested that the "Back To Profile" button redirects user to "My Profile" page.
+
+**Cart**
+* I tested on the cart page, that if the "+" icon is clicked, the product quantity is increasing.
+* I tested on the cart page, that if the "-" icon is clicked, the product quantity is decreasing.
+* I tested on the cart page, that if "Update" is clicked after the user changes the quantity, the subtotal updates.
+* I tested on the cart page, that if "Remove" is clicked, the meal is being removed from the cart.
+* I tested that the "Keep Shopping" button redirects user to the Meals page.
+* I tested that the "Secure Checkout" button brings up a form where the user has to fill in with personal details and credit card details.
+* I tested that if the Secure Checkout form is correctly filled and the "Complete Order" button is clicked, it takes user to the Checkout Success page where user can view the order details and confirmation.
+* I tested that if "Adjust Bag" is clicked, the user will be taken back to their cart.
+
+**Contact**
+* I tested that the "Contact Us" link in footer takes user to the Contact form.
+* I tested the Contact form by filling it in with Name, Subject, Email Address, Message and tested the "Send" button.
+
+**FAQ**
+* I tested that the "FAQ" link in footer takes user to the FAQ page.
+* I tested the FAQ by clicking on a question to see if the answer will pop up.
+* I tested the "Contact Us" link to see if it will take user to the Contact page.
+
+
+**Social Icons**
+* I tested that all social icons open up a new tab with the social media account linked to them.
+
+**About Us**
+* I tested that the "About Us" link in footer takes user to the About page.
+
+
+***
+
+
+
+## Deployment
 
 This project was developed using Gitpod. I used GitHub for my version control and Heroku to host the live version of the project. Heroku hosts complex web applications and services. To deploy my website to Heroku, I used the following steps:
 

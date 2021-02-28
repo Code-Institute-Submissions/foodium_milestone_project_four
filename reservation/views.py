@@ -18,35 +18,13 @@ def reserve_a_table(request):
         reservation_form = TableReservationForm(request.POST)
         if not reservation_form.is_valid():
             return render(
-                request, 'reservation/reservation.html', 
+                request, 'reservation/reservation.html',
                 {"form": reservation_form})
 
         reservation = reservation_form.save()
         if request.user.is_authenticated:
             reservation.user_id = request.user
             reservation.save()
-
-        # if request.user.is_authenticated:
-        # create_reservation_form = Reservation(
-        #     name=request.POST.get('name'),
-        #     phone_number=request.POST.get('phone_number'),
-        #     email=request.POST.get('email'),
-        #     number_of_persons=request.POST.get('number_of_persons'),
-        #     date=request.POST.get('date'),
-        #     time=request.POST.get('time'),
-        #     user_id=request.user
-        # )
-        # create_reservation_form.save()
-        # else:
-        #     create_reservation_form = Reservation(
-        #         name=request.POST.get('name'),
-        #         phone_number=request.POST.get('phone_number'),
-        #         email=request.POST.get('email'),
-        #         number_of_persons=request.POST.get('number_of_persons'),
-        #         date=request.POST.get('date'),
-        #         time=request.POST.get('time'),
-        #     )
-        #     create_reservation_form.save()
 
         # Send Email
         send_mail(
@@ -70,4 +48,7 @@ def reserve_a_table(request):
 
 
 def reserve_a_table_success(request):
+    """
+    A view to render reservation success template
+    """
     return render(request, "reservation/reservation_success.html")
